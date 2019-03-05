@@ -1,0 +1,14 @@
+<div class="input-block">
+  <div class="input-label"> Find Your City </div>
+  <div class="input-holder">
+    <input [(ngModel)]="cityInput" class="input" type="text">
+    <button class="input-button" (click)="findSimilarCities()"></button>
+  </div>
+</div>
+
+
+<div class="candidates" *ngIf="cityCandidates.length > 0">
+  <div *ngFor="let city of cityCandidates" class="city">
+    <div (click)="getWeatherData(city)" class="city-info"> {{ city.name + ' ' + city.country.name }} </div>
+  </div>
+</div>

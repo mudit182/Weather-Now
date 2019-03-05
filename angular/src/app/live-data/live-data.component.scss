@@ -1,0 +1,25 @@
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 24px;
+}
+
+.data {
+  margin-bottom: 24px;
+  margin-right: 24px;
+  padding: 8px;
+  background: rgb(155, 235, 255);
+  border-radius: 5px;
+}
+
+.time-row {
+  display: flex;
+}
+
+.time {
+  padding: 8px;
+  border-radius: 5px;
+  background: rgb(255, 213, 245);
+
+}

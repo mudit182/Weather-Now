@@ -1,0 +1,12 @@
+<div class="dashboard">
+  <div *ngFor="let data of currentData" class="data">
+    {{ data.type + ': ' }} {{ data.value }}
+  </div>
+</div>
+
+
+<div class="time-row">
+    <div class="time">
+      Last Update: {{ timeFetched | amLocale:'en' | amDateFormat:'MMMM Do YYYY, h:mm:ss a' }}
+    </div>
+  </div>

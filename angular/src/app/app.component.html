@@ -1,0 +1,29 @@
+<div class="title-row">
+  <div (click)="sidebarOpen = !sidebarOpen" class="icon-container">
+    <img src="static/angular/assets/icon-sidebar-white.png" alt="">
+  </div>
+  <div class="title">
+    {{ getCurrentCityName() }}
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen, 'sidebar-close': !sidebarOpen}">
+    <div class="inner-sidebar">
+      <div class="nav">
+        <a routerLink="/">Live Data</a>
+      </div>
+      <div class="nav">
+        <a routerLink="/info">Info</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main container-fluid">
+    <div class="row">
+      <div class="col col-12 col-sm-11 col-md-9 col-lg-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
